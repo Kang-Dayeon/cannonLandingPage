@@ -123,7 +123,7 @@
 	left:30px;
 	top:40vh;
 	z-index:20;	
-	background:url(../../../images/main/next01.png) no-repeat 0 0;
+	background:url(./../images/main/next01.png) no-repeat 0 0;
 	background-size:100%;
 }
 .swiper-button-prev2:after,
@@ -145,7 +145,7 @@
 	right:30px;
 	top:40vh;
 	z-index:21;	
-	background:url(../../../images/main/next02.png) no-repeat 0 0;
+	background:url(./../images/main/next02.png) no-repeat 0 0;
 	background-size:100%;
 }
 .swiper-button-next2:after,

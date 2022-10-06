@@ -6,13 +6,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
 	<title>캐논</title>
-
+	<!-- style CSS -->
+	<link rel="stylesheet" href="./css/import.css">
 	<!-- swiper -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-	<!--로그인 스타일시트-->
-	<link rel="stylesheet" href="./css/login.css">
 	<!--로그인 js-->
 	<script type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.model.js"></script>
@@ -22,93 +20,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-
-	<!-- style CSS -->
-	<link rel="stylesheet" href="./css/import.css">
-
-	<!-- Link Swiper's CSS&JS -->
-	<link rel="stylesheet" href="./swiper-Swiper5/package/css/swiper.css">
-	<link rel="stylesheet" href="./swiper-Swiper5/package/css/pagination.css">
-	<link rel="stylesheet" href="./swiper-Swiper5/package/css/arrow.css">
-	<script src="./swiper-Swiper5/package/js/swiper.min.js"></script>
-
 	<!-- AOS CSS -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 	<!--FullDown Menu js-->
 	<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="./js/guide.js"></script>
-	<script type="text/javascript" src="./js/hover.js"></script>
-	<script type="text/javascript" src="./js/TweenMax.js"></script>
-	<script type="text/javascript" src="./js/TweenLite.js"></script>
+
+	<script src="./js/main.js"></script>
 
 
 
-
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#rightsub').hide();
-			$('.right').toggle(
-				function () {
-					$('#rightsub').slideDown("fast");
-					$(".right>a").addClass("on");
-				},
-				function () {
-					$('#rightsub').slideUp("fast");
-					$(".right>a").removeClass("on");
-				}
-			);
-		});
-	</script>
-
-
-	<script>
-		function play_bt() {
-			swiper.autoplay.start();
-		}
-		function stop_bt() {
-			swiper.autoplay.stop();
-		}
-	</script>
-
-	<script>
-		if (!window.jQuery) document.write('<script src="./js/qnb_js/jquery-3.0.0.min.js"><\/script>');
-	</script>
 	<script src="./js/qnb_js/header.js"></script>
-
-	<!--버튼 숨김/나타남 스크립트-->
-	<script>
-		$(function () {
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 200) {
-					$('#topBtn').fadeIn();
-				}
-				else { $('#topBtn').fadeOut(); }
-			});
-			$("#topBtn").click(function () {
-				$('html, body').animate({ scrollTop: 0 }, 500);
-				return false;
-			});
-		});
-	</script>
-	<script>
-		$(function () {
-			$(window).scroll(function () {
-				if ($(this).scrollTop() > 200) {
-					$('#t_topBtn').fadeIn();
-				}
-				else { $('#t_topBtn').fadeOut(); }
-			});
-			$("#t_topBtn").click(function () {
-				$('html, body').animate({ scrollTop: 0 }, 400);
-				return false;
-			});
-		});
-	</script>
-
-
-
 
 </head>
 
@@ -151,9 +74,9 @@
 						<div id="snsLogin">
 							<h6>SNS계정을 연동하여 빠르고 안전하게 로그인/회원가입 할 수 있습니다.</h6>
 							<ul>
-								<li><a href="javascript:;"><img src="./images/login/naver_icon.gif" alt="네이버" /></a></li>
-								<li><a href="javascript:;"><img src="./images/login/kakao_icon.gif" alt="카카오톡" /></a></li>
-								<li><a href="javascript:;"><img src="./images/login/apple_icon.gif" alt="애플" /></a></li>
+								<li><a href="#"><img src="./images/login/naver_icon.gif" alt="네이버" /></a></li>
+								<li><a href="#"><img src="./images/login/kakao_icon.gif" alt="카카오톡" /></a></li>
+								<li><a href="#"><img src="./images/login/apple_icon.gif" alt="애플" /></a></li>
 							</ul>
 						</div>
 					</fieldset>
@@ -164,68 +87,33 @@
 		</div>
 		<!--로그인끝-->
 
-		<div class="inner">
+		<div class="header-inner">
 			<h1 id="logo"><a href="./index.html"><img src="./images/common/logo.png" alt="logo" /></a></h1>
 
 			<!--태블릿 로고-->
 			<h1 id="t_logo"><a href="./index.html"><img src="./images/common/t_logo.png" alt="logo" /></a></h1>
+			<ul class="gnb">
+				<li class="gnb-list">
+					<a href="./product.html" class="gnb-anchor">제품</a>
+				</li>
+				<li class="gnb-list">
+					<a href="./support.html" class="gnb-anchor">고객지원</a>
+				</li>
+				<li class="gnb-list">
+					<a href="./event.html" class="gnb-anchor">이벤트</a>
+				</li>
+				<li class="gnb-list">
+					<a href="./rchive.html" class="gnb-anchor">Rchive</a>
+				</li>
+				<li class="gnb-list">
+					<a href="./story.html" class="gnb-anchor">story</a>
+				</li>
+			</ul>
+			<div class="depth2">
 
-
-			<div class="header01">
-				<div class="headerD">
-					<!-- headerD-->
-					<!--gnb-->
-					<div class="gnbD">
-						<ul class="gnb">
-							<li class="gL1">
-								<a href="./product.html" class="oneD">제품</a>
-								<div class="twoD1">
-									<a href="./product.html"><span>카메라</span`></a>
-									<a href="./product.html"><span>프린터</span></a>
-									<a href="./product.html"><span>의료기기</span></a>
-									<a href="./product.html"><span>etc</span></a>
-								</div>
-							</li>
-
-							<li class="gL2">
-								<a href="./support.html" class="oneD">고객지원</a>
-								<div class="twoD2">
-									<a href="./support.html"><span>정품등록</span></a>
-									<a href="./support.html"><span>기술지원</span></a>
-									<a href="./support.html"><span>A/S 안내</span></a>
-									<a href="./support.html"><span>매장안내</span></a>
-									<a href="./support.html"><span>렌탈 문의</span></a>
-								</div>
-							</li>
-
-							<li class="gL3">
-								<a href="./event.html" class="oneD">이벤트</a>
-								<div class="twoD3">
-									<a href="./event.html"><span>진행중인 이벤트</span></a>
-									<a href="./event.html"><span>종료된 이벤트</span></a>
-									<a href="./event.html"><span>당첨자 발표</span></a>
-
-								</div>
-							</li>
-
-							<li class="gL4">
-								<a href="./rchive.html" class="oneD">Rchive</a>
-							</li>
-
-							<li class="gL5">
-								<a href="./story.html" class="oneD">story</a>
-							</li>
-						</ul>
-					</div>
-					<!--// gnbD -->
-				</div>
-				<!--// headerD -->
 			</div>
-
-
-			<div class="right">
-				<a href="javascript:;">
-				</a>
+			<div class="menu">
+				<a class="menu-anchor" href="#">menu</a>
 			</div>
 			<div id="rightsub">
 				<ul>
@@ -291,11 +179,6 @@
 	</header>
 
 	<section id="visual" style="position:relative">
-		<!--play_stop-->
-		<div class="controls">
-			<a href="javascript:play_bt()" class="play"></a>
-			<a href="javascript:stop_bt()" class="stop"></a>
-		</div>
 		<!-- Swiper -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
@@ -306,9 +189,8 @@
 								<h4>18년 연속 1위 EOS R 시리즈</h4>
 								<h3>풀프레임 미러리스 선택의 기준</h3>
 								<h2>EOS R6</h2>
-								<p><a href="javascript:;">제품 보러가기</a></p>
+								<p><a href="#">제품 보러가기</a></p>
 							</div>
-
 							<!--태블릿 비주얼-->
 							<div class="t_vtext">
 								<p>PRINTING</p>
@@ -318,15 +200,11 @@
 									Meet the PIXMA<br />
 									G650 and G550<br />
 									Mega Tank printers</h3>
-								<!--<p>Take a deep into the new PIXMA MegaTank<br />
-								printers and find out why they’re ideal for business<br />
-								owners and perfect in your home office.</p>-->
 							</div>
-							<p class="more"><a href="javascript:;">제품 보러가기</a></p>
+							<p class="more"><a href="#">제품 보러가기</a></p>
 							<!--태블릿끝-->
-
 							<div class="v_product">
-								<a href="javascript:;"><img src="./images/main/product01.png" alt="상품" class="animation_item1" /></a>
+								<a href="#"><img src="./images/main/product01.png" alt="상품" class="animation_item1" /></a>
 							</div>
 						</div>
 						<!--//inner-->
@@ -349,7 +227,7 @@
 				printers and find out why they’re ideal for business<br />
 				owners and perfect in your home office.</p>-->
 							</div>
-							<p class="more"><a href="javascript:;">제품 보러가기</a></p>
+							<p class="more"><a href="#">제품 보러가기</a></p>
 						</div>
 					</div>
 					<div class="t-visual02">
@@ -358,7 +236,7 @@
 							<!--<p>Chic and totally portable, these pocketable models give you immediate results - <br />
 					perfect for capturing that special moment and creating instantly sharable snaps</p>-->
 						</div>
-						<p class="t2_shope"><a href="javascript:;">SHOP THE RANGE</a></p>
+						<p class="t2_shope"><a href="#">SHOP THE RANGE</a></p>
 					</div>
 				</div>
 				<!--visual02-->
@@ -370,18 +248,18 @@
 							<!--<p>Chic and totally portable, these pocketable models give you immediate results - <br />
 					perfect for capturing that special moment and creating instantly sharable snaps</p>-->
 						</div>
-						<p class="shope"><a href="javascript:;">SHOP THE RANGE</a></p>
+						<p class="shope"><a href="#">SHOP THE RANGE</a></p>
 					</div>
 					<div class="t-visual03">
 						<h3>Camera Future</h3>
-						<p class="t-read"><a href="javascript:;">Read more about Canon</a></p>
+						<p class="t-read"><a href="#">Read more about Canon</a></p>
 					</div>
 				</div>
 
 				<div class="swiper-slide visual04">
 					<div class="v4_text">
 						<h3>Camera Future</h3>
-						<p class="read"><a href="javascript:;">Read more about Canon</a></p>
+						<p class="read"><a href="#">Read more about Canon</a></p>
 					</div>
 				</div>
 
@@ -413,7 +291,7 @@
 									<p>결정적인 순간을 놓치지 않는<br />
 										최대 약 20fps의 고속 연속 촬영</p>
 									<div class="c_product">
-										<a href="javascript:;">
+										<a href="#">
 											<img src="./images/main/c1_product01.png" alt="베스트상품" /></a>
 									</div>
 								</article>
@@ -423,7 +301,7 @@
 									<h2>BEST</h2>
 									<h3>EOS R</h3>
 									<div class="t_c01product">
-										<a href="javascript:;">
+										<a href="#">
 											<img src="./images/main/t_c1_product01.png" alt="베스트상품" />
 										</a>
 									</div>
@@ -462,7 +340,7 @@
 									<h3>EOS R5</h3>
 									<p>8K,<br />풀프레임 미러리스의 혁명</p>
 									<div class="c_product">
-										<a href="javascript:;">
+										<a href="#">
 											<img src="./images/main/c1_product02.png" alt="베스트상품" />
 										</a>
 									</div>
@@ -473,7 +351,7 @@
 									<h2>BEST</h2>
 									<h3>EOS R5</h3>
 									<div class="t_c01product">
-										<a href="javascript:;">
+										<a href="#">
 											<img src="./images/main/t_c1_product02.png" alt="베스트상품" />
 										</a>
 									</div>
@@ -513,7 +391,7 @@
 									<p>천체를 담는<br />
 										풀프레임 스페셜리스트</p>
 									<div class="c_product">
-										<a href="javascript:;">
+										<a href="#">
 											<img src="./images/main/c1_product03.png" alt="베스트상품" />
 										</a>
 									</div>
@@ -524,7 +402,7 @@
 									<h2>BEST</h2>
 									<h3>EOS Ra</h3>
 									<div class="t_c01product">
-										<a href="javascript:;">
+										<a href="#">
 											<img src="./images/main/t_c1_product03.png" alt="베스트상품" />
 										</a>
 									</div>
@@ -580,7 +458,7 @@
 						<dd id="name">강영호 홍장현</dd>
 						<dd id="date">2021.04.08 - 05.23</dd>
 					</dl>
-					<p><a href="javascript:;">보러가기</a></p>
+					<p><a href="#">보러가기</a></p>
 				</div>
 			</div>
 			<!--c02_inner-->
@@ -725,10 +603,10 @@
 	<!--c05-->
 
 	<section id="top">
-		<p id="topBtn"><a href="javascript:;"><img src="./images/common/top.gif" alt="top" /></a></p>
+		<p id="topBtn"><a href="#"><img src="./images/common/top.gif" alt="top" /></a></p>
 
 		<!--태블릿 탑버튼-->
-		<p id="t_topBtn"><a href="javascript:;"><img src="./images/common/t_top.gif" alt="top" /></a></p>
+		<p id="t_topBtn"><a href="#"><img src="./images/common/t_top.gif" alt="top" /></a></p>
 	</section>
 
 
@@ -743,26 +621,26 @@
 				<h2 id="m_logo"><img src="./images/common/m_logo_05.png" alt="하단로고" /></h2>
 
 				<ul id="f_menu">
-					<li><a href="javascript:;">회사소개</a></li>
-					<li><a href="javascript:;">개인정보처리방침</a></li>
-					<li><a href="javascript:;">이용약관</a></li>
+					<li><a href="#">회사소개</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+					<li><a href="#">이용약관</a></li>
 				</ul>
 
 				<ul id="f_sns">
-					<li><a href="javascript:;"><img src="./images/common/sns_icon_06.gif" alt="인스타그램" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/sns_icon_11.gif" alt="유튜브" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/sns_icon_08.gif" alt="페이스북" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/sns_icon_03.gif" alt="트위터" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/sns_icon_14.gif" alt="카카오페이지" /></a></li>
+					<li><a href="#"><img src="./images/common/sns_icon_06.gif" alt="인스타그램" /></a></li>
+					<li><a href="#"><img src="./images/common/sns_icon_11.gif" alt="유튜브" /></a></li>
+					<li><a href="#"><img src="./images/common/sns_icon_08.gif" alt="페이스북" /></a></li>
+					<li><a href="#"><img src="./images/common/sns_icon_03.gif" alt="트위터" /></a></li>
+					<li><a href="#"><img src="./images/common/sns_icon_14.gif" alt="카카오페이지" /></a></li>
 				</ul>
 
 				<!--모바일 sns icon-->
 				<ul id="m_sns">
-					<li><a href="javascript:;"><img src="./images/common/msns_icon1.gif" alt="인스타그램" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/msns_icon2.gif" alt="유튜브" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/msns_icon3.gif" alt="페이스북" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/msns_icon4.gif" alt="트위터" /></a></li>
-					<li><a href="javascript:;"><img src="./images/common/msns_icon5.gif" alt="카카오페이지" /></a></li>
+					<li><a href="#"><img src="./images/common/msns_icon1.gif" alt="인스타그램" /></a></li>
+					<li><a href="#"><img src="./images/common/msns_icon2.gif" alt="유튜브" /></a></li>
+					<li><a href="#"><img src="./images/common/msns_icon3.gif" alt="페이스북" /></a></li>
+					<li><a href="#"><img src="./images/common/msns_icon4.gif" alt="트위터" /></a></li>
+					<li><a href="#"><img src="./images/common/msns_icon5.gif" alt="카카오페이지" /></a></li>
 				</ul>
 
 				<ul id="f_info_top">
@@ -798,10 +676,17 @@
 			</div>
 		</div>
 	</footer>
+	<!-- AOS script -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+	<script src="./js/qnb_js/main.js"></script>
+	<!-- Resource jQuery -->
+	<script src="./js/qnb_js/ui.js"></script>
 
 	<!-- Initialize Swiper -->
 	<script>
+		AOS.init();
+
 		var swiper = new Swiper('.swiper-container', {
 			effect: 'coverflow',
 			coverflowEffect: {
@@ -818,10 +703,8 @@
 			},
 			speed: 2500,
 		});
-	</script>
 
-	<!-- Initialize Swiper -->
-	<script>
+		// <!-- Initialize Swiper -->
 		var swiper2 = new Swiper('.swiper-container2', {
 			navigation: {
 				nextEl: '.swiper-button-next',
@@ -833,10 +716,7 @@
 			},
 			spaceBetween: 30,
 		});
-	</script>
-
-	<!-- Initialize Swiper -->
-	<script>
+		// <!-- Initialize Swiper -->
 		var swiper3 = new Swiper('.swiper-container3', {
 			navigation: {
 				nextEl: '.swiper-button-next2',
@@ -848,18 +728,17 @@
 			},
 			spaceBetween: 30,
 		});
+
+		// function play_bt() {
+		// 	swiper.autoplay.start();
+		// }
+		// function stop_bt() {
+		// 	swiper.autoplay.stop();
+		// }
 	</script>
 
-	<!-- AOS script -->
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-	<script>
-		AOS.init();
-	</script>
 
-	<script src="./js/qnb_js/main.js"></script>
-	<!-- Resource jQuery -->
-	<script src="./js/qnb_js/ui.js"></script>
 
 </body>
 

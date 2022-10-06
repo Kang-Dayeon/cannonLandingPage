@@ -17,7 +17,6 @@ body{overflow-x : hidden;}
 
 @media all and (min-width:1280px){   /*최저 1280이라는 의미는 1280이상을 모두 의미함*/
 #visual{
-	border:0px solid black;
 	width:100%;
 	height:100%;
 	position:relative;
@@ -28,7 +27,6 @@ body{overflow-x : hidden;}
 	bottom:18px;
 	z-index:100;
 	width:95%;
-	border:0px solid red;
 	text-align:right;
 }
 #visual .controls .play{
@@ -51,7 +49,6 @@ body{overflow-x : hidden;}
 
 
 #visual .swiper-container .swiper-slide.visual01{
-	border:0px solid green;
     background:url(../images/main/v_bg01.png) no-repeat center top;
 	background-size:cover;
 }
@@ -60,11 +57,9 @@ body{overflow-x : hidden;}
 	height:100%;
 	margin:0 auto;
 	display:table;
-	border:0px solid green;
 }
 
 #visual .swiper-container .swiper-slide.visual01 .outer .inner{
-	border:0px solid yellow;
 	width:100%;
 	height:100vh;
 	display:table-cell;
@@ -73,7 +68,6 @@ body{overflow-x : hidden;}
 }
 
 #visual .swiper-container .swiper-slide.visual01 .outer .inner div.v_text{
-	border:0px solid cyan;
 	text-align:left;
 }
 
@@ -122,7 +116,6 @@ body{overflow-x : hidden;}
 #visual .swiper-container .swiper-slide.visual01 .outer .inner div.v_text p a:hover{background-color:#c01921;}
 
 #visual .swiper-container .swiper-slide.visual01 .outer .inner div.v_product{
-	border:0px solid yellow;
 	position:absolute;
 	right:10vw;
 	bottom:10vh;
@@ -131,21 +124,18 @@ body{overflow-x : hidden;}
 /*--------------------------v2-------------------------*/
 
 #visual .swiper-container .swiper-slide.visual02{
-	border:0px solid black;
 	width:100%;
 	height:100%;
 	background:url(../images/main/v_bg02.png) no-repeat center top;
 	background-size:cover;
 }
 #visual .swiper-container .swiper-slide.visual02 .inner{
-	border:0px solid pink;
 	width:90%;
 	height:100%;
 	text-align:left;
 	margin:0 auto;
 }
 #visual .swiper-container .swiper-slide.visual02 .inner .v2_text{
-	border:0px solid cyan;
 	width:100%;
 	height:auto;
 	padding-top:20vh;
@@ -175,7 +165,6 @@ body{overflow-x : hidden;}
 	letter-spacing:1px;
 	}
 #visual .swiper-container .swiper-slide.visual02 .inner p.more{
-	border:0px solid cyan;
 	margin-top:3.7vh;
 	}
 #visual .swiper-container .swiper-slide.visual02 .inner p.more a{
@@ -221,7 +210,6 @@ body{overflow-x : hidden;}
 }
 
 #visual .swiper-container .swiper-slide.visual03 .v3_text{
-	border:0px solid cyan;
 	width:100%;
 	height:auto;
 	text-align:center;
@@ -243,7 +231,6 @@ body{overflow-x : hidden;}
 	letter-spacing:1px;
 	}
 #visual .swiper-container .swiper-slide.visual03 .shope{
-	border:0px solid cyan;
 	margin-top:0;
 	text-align:center;
 	}
@@ -291,7 +278,6 @@ body{overflow-x : hidden;}
 }
 
 #visual .swiper-container .swiper-slide.visual04 .v4_text{
-	border:0px solid cyan;
 	width:100%;
 	height:auto;
 	text-align:center;
@@ -307,7 +293,6 @@ body{overflow-x : hidden;}
 	}
 
 #visual .swiper-container .swiper-slide.visual04 .read{
-	border:0px solid cyan;
 	width:100%;
 	}
 #visual .swiper-container .swiper-slide.visual04 .read a{
@@ -347,20 +332,16 @@ body{overflow-x : hidden;}
 /*해상도별로 문제 되는 부분을 각각 수정함*/
 
 @media all and (min-width:2001px){
-	#visual .outer .inner div.v_product{width:50%; height:auto;right:5vw;border:0px solid pink;}
 }
 
 @media all and (min-width:1700px) and (max-width:2000px){
-	#visual .outer .inner div.v_product{width:50%; height:auto;right:10vw;border:0px solid cyan;}
 }
 
 @media all and (min-width:1280px) and (max-width:1699px){
-	#visual .outer .inner div.v_product{width:58%; height:auto;right:5vw;border:0px solid cyan;}
 }
 
 
 #contents{
-	border:0px solid red;
 	width:100%;
 	height:auto;
 	background:url(../images/main/background.png) no-repeat center top;
@@ -370,19 +351,16 @@ body{overflow-x : hidden;}
 	margin:0 auto;
 }
 #contents .c01{
-	border:0px solid magenta;
 	width:100%;
 	height:100vh;
 	overflow:hidden;
 }
 
 #contents .c01 .swiper-container2 .swiper-slide .outer {
-	border:0px solid green;
 	width:100%;
 	height:100%;
 }
 #contents .c01 .swiper-container2 .swiper-slide .outer .inner{
-	border:0px solid blue;
 	width:90%;
 	height:100%;
 	margin:0 auto;
@@ -391,7 +369,6 @@ body{overflow-x : hidden;}
 
 
 #contents .c01 .swiper-container2 .swiper-slide.content01 .outer .inner .c01_left{
-	border:0px solid green;
 	background:url(../images/main/c1_bg01.png) no-repeat center top;
 	background-size:cover;
 	width:60%;
@@ -402,7 +379,6 @@ body{overflow-x : hidden;}
 	z-index:1;
 }
 #contents .c01 .swiper-container2 .swiper-slide.content02 .outer .inner .c01_left{
-	border:0px solid green;
 	background:url(../images/main/c1_bg03.png) no-repeat center top;
 	background-size:cover;
 	width:60%;
@@ -413,7 +389,6 @@ body{overflow-x : hidden;}
 	z-index:1;
 }
 #contents .c01 .swiper-container2 .swiper-slide.content03 .outer .inner .c01_left{
-	border:0px solid green;
 	background:url(../images/main/c1_bg05.png) no-repeat center top;
 	background-size:cover;
 	width:60%;
@@ -428,7 +403,6 @@ body{overflow-x : hidden;}
 	display:none;
 }
 #contents .c01 .swiper-container2 .swiper-slide.content01 .outer .inner .c01_right{
-	border:0px solid orange;
 	background:url(../images/main/c1_bg02.png) no-repeat center top;
 	background-size:cover;
 	width:52%;
@@ -439,7 +413,6 @@ body{overflow-x : hidden;}
 	z-index:3;
 }
 #contents .c01 .swiper-container2 .swiper-slide.content02 .outer .inner .c01_right{
-	border:0px solid orange;
 	background:url(../images/main/c1_bg04.png) no-repeat center top;
 	background-size:cover;
 	width:52%;
@@ -450,7 +423,6 @@ body{overflow-x : hidden;}
 	z-index:3;
 }
 #contents .c01 .swiper-container2 .swiper-slide.content03 .outer .inner .c01_right{
-	border:0px solid orange;
 	background:url(../images/main/c1_bg06.png) no-repeat center top;
 	background-size:cover;
 	width:52%;
@@ -469,7 +441,6 @@ body{overflow-x : hidden;}
 
 
 #contents .c01 .outer .inner article{
-	border:0px solid black;
 	width:100%;
 	position:absolute;
 	/*right:400px;*/
@@ -494,7 +465,6 @@ body{overflow-x : hidden;}
 }
 
 #contents .c01 .outer .inner article h2{
-	border:0px solid red;
 	text-align:center;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size:55px;
@@ -505,7 +475,6 @@ body{overflow-x : hidden;}
 	background-size:8.33vw;
 }
 #contents .c01 .outer .inner article h3{
-	border:0px solid green;
 	text-align:center;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size:60px;
@@ -515,7 +484,6 @@ body{overflow-x : hidden;}
 }
 
 #contents .c01 .outer .inner article p{
-	border:0px solid pink;
 	text-align:center;
 	font-family: 'Noto Sans KR', sans-serif;
 	font-size:24px;
@@ -524,7 +492,6 @@ body{overflow-x : hidden;}
 	padding-bottom:3.6vh;
 }
 #contents .c01 .outer .inner article div.c_product{
-	border:0px solid cyan;
 	width:32%;
 	/*height:40vh;*/
 	
@@ -544,7 +511,6 @@ body{overflow-x : hidden;}
 
 /*c02$*/
 #contents #c02{
-	border:0px solid red;
 	width:100%;
 	height:100vh;
 	margin:0 auto;
@@ -564,7 +530,6 @@ body{overflow-x : hidden;}
 }
 
 #contents #c02 div.c02_inner{
-	border:0px solid blue;
 	width:90%;
 	height:auto;
 	margin:0 auto;
@@ -572,7 +537,6 @@ body{overflow-x : hidden;}
 	
 }
 #contents #c02 div.c02_inner .gallery_img{
-	border:0px solid green;
 	width:50%;
 	height:65.5vh;
 	float:left;
@@ -593,7 +557,6 @@ body{overflow-x : hidden;}
 }
 
 #contents #c02 div.c02_inner div#gallery_info{
-	border:0px solid orange;
 	width:50%;
 	height:65.5vh;
 	float:right;
@@ -611,7 +574,6 @@ body{overflow-x : hidden;}
     -ms-align-items: center;
 }
 #contents #c02 div.c02_inner div#gallery_info dl{
-	border:0px solid cyan;
 	width:36.69vw;
 	float:left;
 }
@@ -653,7 +615,6 @@ body{overflow-x : hidden;}
 	font-weight:300;
 }
 #contents #c02 div.c02_inner div#gallery_info p{
-	border:0px solid red;
 	/*width:190px;*/
 	width:186px;
 	height:auto;
@@ -676,13 +637,11 @@ body{overflow-x : hidden;}
 
 /*c03@*/
 #contents #c03{
-	border:0px solid pink;
 	width:100%;
 	height:100vh;
 	margin-top:10vh;
 }
 #contents #c03 div.c03_inner{ 
-	border:0px solid green;
 	width:90%;
 	height:80%;
 	margin:0 auto;
@@ -698,15 +657,12 @@ body{overflow-x : hidden;}
 	overflow:hidden;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3{
-	border:0px solid yellow;
 	width:100%;
 	height:100%;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide{
-	border:0px solid blue;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide.content01 .c03_best{ 
-	border:0px solid red;
 	width:100%;
 	height:100%;
 	float:left;
@@ -716,7 +672,6 @@ body{overflow-x : hidden;}
 	margin:0 auto;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide.content02 .c03_best{ 
-	border:0px solid red;
 	width:100%;
 	height:100%;
 	float:left;
@@ -726,7 +681,6 @@ body{overflow-x : hidden;}
 	margin:0 auto;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide.content03 .c03_best{ 
-	border:0px solid red;
 	width:100%;
 	height:100%;
 	float:left;
@@ -736,7 +690,6 @@ body{overflow-x : hidden;}
 	margin:0 auto;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide .c03_best dl{ 
-	border:0px solid blue;
 	text-align:left;
 	margin:6vh 0 0 6vw;
 }
@@ -754,7 +707,6 @@ body{overflow-x : hidden;}
 	margin-bottom:2vh;
 }
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide .c03_best dl dd{ 
-	border:0px solid red;
 	font-family: 'Noto Sans KR', sans-serif;
 	/*font-size:30px;*/
 	font-size:1.56vw;
@@ -764,7 +716,6 @@ body{overflow-x : hidden;}
 }
 
 #contents #c03 .c03_inner #best_box .swiper-container3 .swiper-slide .c03_best dl dd:last-child{ 
-	border:0px solid blue;
 	font-family: 'Noto Sans KR', sans-serif;
 	/*font-size:72px;*/
 	font-size:3.13vw;
@@ -775,13 +726,11 @@ body{overflow-x : hidden;}
 
 
 #contents #c03 .c03_inner #c03_product{
-	border:0px solid yellow;
 	width:35%;
 	height:100%;
 	float:right;
 }
 #contents #c03 div.c03_inner div#c03_product ul{
-	border:0px solid cyan;
 	width:100%;
 	height:100%;
 }
@@ -806,7 +755,6 @@ body{overflow-x : hidden;}
 	background-color:rgba(0,0,0,0.5);
 }
 #contents #c03 div.c03_inner div#c03_product ul li:nth-child(1){
-	border:0px solid black;
 	width:100%;
 	height:32%;
 	margin-bottom:1.5vh;
@@ -816,7 +764,6 @@ body{overflow-x : hidden;}
 }
 
 #contents #c03 div.c03_inner div#c03_product ul li:nth-child(2){
-	border:0px solid pink;
 	width:100%;
 	height:32%;
 	margin-bottom:1.5vh;
@@ -824,7 +771,6 @@ body{overflow-x : hidden;}
 	background-size:cover;
 }
 #contents #c03 div.c03_inner div#c03_product ul li:nth-child(3){
-	border:0px solid pink;
 	width:100%;
 	height:32%;
 	background:url(../images/main/c03_printer.png) no-repeat 0 0;
@@ -902,7 +848,6 @@ body{overflow-x : hidden;}
 #c05 p#tc05_img img{
 	display:none;
 }
-}
 /*모바일 이미지 숨기기*/
 #c05 p#mc05_img{
 	display:none;
@@ -937,7 +882,6 @@ body{overflow-x : hidden;}
 	
 /*-----------------------태블릿 v01---------------------*/
 	#visual .swiper-slide.visual01{
-		border:0px solid yellow;
 		width:100%;
 		height:100%;
 		background:url(../images/main/t_bg01.png) no-repeat center top;
@@ -949,15 +893,12 @@ body{overflow-x : hidden;}
 		height:100%;
 		margin:0 auto;
 		display:block;
-		border:0px solid green;
 	}
 
 	#visual .swiper-slide.visual01 .outer .inner{
-		border:0px solid yellow;
 		width:100%;
 		height:100%;
 		display:block;
-		vertical-align:none;
 		position:static;
 	}
 
@@ -984,7 +925,6 @@ body{overflow-x : hidden;}
 
 	/*태블릿 보이게*/
 	#visual .swiper-slide.visual01 .outer .inner div.t_vtext{
-		border:0px solid red;
 		height:auto;
 		display:block;
 		width:100%;
@@ -1016,7 +956,6 @@ body{overflow-x : hidden;}
 		letter-spacing:1px;
 	}
 	#visual .swiper-slide.visual01 .outer .inner .more{
-		border:0px solid cyan;
 		width:100%;
 		display:block;
 		margin-top:17px;
@@ -1062,7 +1001,6 @@ body{overflow-x : hidden;}
 	}
 
 	#visual .swiper-container .swiper-slide.visual02 .t-visual02 .t2_text{
-		border:0px solid cyan;
 		width:90%;
 		height:auto;
 		text-align:center;
@@ -1085,7 +1023,6 @@ body{overflow-x : hidden;}
 		padding-bottom:10vh;
 	}
 	#visual .swiper-container .swiper-slide.visual02 .t-visual02 .t2_shope{
-		border:0px solid cyan;
 	}
 	#visual .swiper-container .swiper-slide.visual02 .t-visual02 .t2_shope a{
 		width:300px;
@@ -1142,7 +1079,6 @@ body{overflow-x : hidden;}
 	}
 
 	#visual .swiper-container .swiper-slide.visual03 .t-visual03 .t-read{
-		border:0px solid cyan;
 		margin:0 auto;
 		text-align:center;
 	}
@@ -1176,7 +1112,6 @@ body{overflow-x : hidden;}
 	
 	/*------------------------------------태블릿 contents c01------------------------------------*/
 	#contents{
-		border:0px solid red;
 		width:100%;
 		height:auto;
 		background:url(../images/main/t_background.png) no-repeat center top;
@@ -1197,12 +1132,10 @@ body{overflow-x : hidden;}
 @media all and (min-width:600px) and (max-width:1279px) and (orientation:portrait){
 	
 	#contents .c01 .swiper-container2 .swiper-slide .outer{
-		border:0px solid blue;
 		width:100%;
 		height:100vh;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner{
-		border:0px solid pink;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -1222,7 +1155,6 @@ body{overflow-x : hidden;}
 
 
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01{
-		border:0px solid black;
 		display:block;
 		width:100%;
 		height:100%;
@@ -1243,7 +1175,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01 h3{
-		border:0px solid magenta;
 		width:100%;
 		position:absolute;
 		bottom:40vh;
@@ -1253,7 +1184,6 @@ body{overflow-x : hidden;}
 		font-weight:500;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01 .t_c01product{
-		border:0px solid cyan;
 		width:100%;
 		position:absolute;
 		bottom:8vh;
@@ -1354,7 +1284,6 @@ body{overflow-x : hidden;}
 	
 	/*c02$*/
 	#contents #c02{
-		border:0px solid red;
 		width:100%;
 		height:60vh;
 		margin:0 auto;
@@ -1364,7 +1293,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents #c02 div.c02_inner{
-		border:0px solid blue;
 		width:100%;
 		height:100%;
 		margin:0 auto;
@@ -1372,7 +1300,6 @@ body{overflow-x : hidden;}
 		position:relative;
 	}
 	#contents #c02 div.c02_inner .gallery_img{
-		border:0px solid green;
 		width:100%;
 		height:100%;
 		float:left;
@@ -1416,7 +1343,6 @@ body{overflow-x : hidden;}
 		-ms-align-items: center;
 	}
 	#contents #c02 div.c02_inner div#gallery_info dl{
-		border:0px solid cyan;
 		width:100%;
 		float:none;
 	}
@@ -1461,14 +1387,12 @@ body{overflow-x : hidden;}
 		
 	/*c03@*/
 	#contents #c03{
-		border:0px solid pink;
 		width:100%;
 		height:80vh;
 		padding:5vh 0;
 		margin-top:0;
 	}
 	#contents #c03 div.c03_inner{ 
-		border:0px solid green;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -1508,18 +1432,15 @@ body{overflow-x : hidden;}
 	}
 
 	#contents #c03 div.c03_inner div#c03_product{
-		border:0px solid blue;
 		width:100%;
 		height:100%;
 		float:none;
 	}
 	#contents #c03 div.c03_inner div#c03_product ul{
-		border:0px solid cyan;
 		width:100%;
 		height:100%;
 	}
-	##contents #c03 div.c03_inner div#c03_product ul li{
-		border:0px solid black;
+	#contents #c03 div.c03_inner div#c03_product ul li{
 		width:100%;
 		height:32%;
 		margin-bottom:0;
@@ -1572,13 +1493,11 @@ body{overflow-x : hidden;}
 	
 		/*c04*/
 	#c04{
-		border:0px solid red;
 		width:100%;
 		height:20vh;
 		background:#000;
 	}
 	#c04 .c04_inner{
-		border:0px solid green;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -1596,7 +1515,6 @@ body{overflow-x : hidden;}
 		-ms-align-items: center;
 	}
 	#c04 div.c04_inner dl{
-		border:0px solid yellow;
 		width:20%;
 		height:70%;
 		float:left;
@@ -1609,7 +1527,6 @@ body{overflow-x : hidden;}
 	}
 	#c04 div.c04_inner dl dt{
 		width:100%;
-		border:0px solid blue;
 		position:absolute;
 		top:50%;
 		text-align:center;
@@ -1628,7 +1545,6 @@ body{overflow-x : hidden;}
 	}
 
 	#c04 div.c04_inner dl dd.icon{
-		border:0px solid cyan;
 		width:7.5vw;
 		position:static;
 		margin:0 auto;
@@ -1645,7 +1561,6 @@ body{overflow-x : hidden;}
 	
 	/*c05*/
 	#c05{
-		border:0px solid yellow;
 		width:100%;
 		height:30vh;
 		position:relative;
@@ -1694,12 +1609,10 @@ body{overflow-x : hidden;}
 @media all and (min-width:600px) and (max-width:1279px) and (orientation:landscape){
 	
 #contents .c01 .swiper-container2 .swiper-slide .outer{
-		border:0px solid blue;
 		width:100%;
 		height:100vh;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner{
-		border:0px solid pink;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -1717,7 +1630,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01{
-		border:0px solid black;
 		display:block;
 		width:100%;
 		height:100%;
@@ -1738,7 +1650,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01 h3{
-		border:0px solid magenta;
 		width:100%;
 		position:absolute;
 		bottom:40vh;
@@ -1748,7 +1659,6 @@ body{overflow-x : hidden;}
 		font-weight:500;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01 .t_c01product{
-		border:0px solid cyan;
 		width:50%;
 		position:absolute;
 		bottom:8vh;
@@ -1850,7 +1760,6 @@ body{overflow-x : hidden;}
 	
 	/*c02$*/
 	#contents #c02{
-		border:0px solid red;
 		width:100%;
 		height:150vh;
 		margin:0 auto;
@@ -1860,7 +1769,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents #c02 div.c02_inner{
-		border:0px solid blue;
 		width:100%;
 		height:100%;
 		margin:0 auto;
@@ -1868,7 +1776,6 @@ body{overflow-x : hidden;}
 		position:relative;
 	}
 	#contents #c02 div.c02_inner .gallery_img{
-		border:0px solid green;
 		width:100%;
 		height:100%;
 		float:left;
@@ -1912,7 +1819,6 @@ body{overflow-x : hidden;}
 		-ms-align-items: center;
 	}
 	#contents #c02 div.c02_inner div#gallery_info dl{
-		border:0px solid cyan;
 		width:100%;
 		float:none;
 	}
@@ -1957,14 +1863,12 @@ body{overflow-x : hidden;}
 		
 	/*c03@*/
 	#contents #c03{
-		border:0px solid pink;
 		width:100%;
 		height:120vh;
 		padding:5vh 0;
 		margin-top:0;
 	}
 	#contents #c03 div.c03_inner{ 
-		border:0px solid green;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -2004,18 +1908,15 @@ body{overflow-x : hidden;}
 	}
 
 	#contents #c03 div.c03_inner div#c03_product{
-		border:0px solid blue;
 		width:100%;
 		height:100%;
 		float:none;
 	}
 	#contents #c03 div.c03_inner div#c03_product ul{
-		border:0px solid cyan;
 		width:100%;
 		height:100%;
 	}
-	##contents #c03 div.c03_inner div#c03_product ul li{
-		border:0px solid black;
+	#contents #c03 div.c03_inner div#c03_product ul li{
 		width:100%;
 		height:32%;
 		margin-bottom:0;
@@ -2070,13 +1971,11 @@ body{overflow-x : hidden;}
 	
 	/*c04*/
 	#c04{
-		border:0px solid red;
 		width:100%;
 		height:40vh;
 		background:#000;
 	}
 	#c04 .c04_inner{
-		border:0px solid green;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -2094,7 +1993,6 @@ body{overflow-x : hidden;}
 		-ms-align-items: center;
 	}
 	#c04 div.c04_inner dl{
-		border:0px solid yellow;
 		width:20%;
 		height:85%;
 		float:left;
@@ -2107,7 +2005,6 @@ body{overflow-x : hidden;}
 	}
 	#c04 div.c04_inner dl dt{
 		width:100%;
-		border:0px solid blue;
 		position:absolute;
 		top:50%;
 		text-align:center;
@@ -2126,7 +2023,6 @@ body{overflow-x : hidden;}
 	}
 
 	#c04 div.c04_inner dl dd.icon{
-		border:0px solid cyan;
 		width:7.5vw;
 		position:static;
 		margin:0 auto;
@@ -2142,7 +2038,6 @@ body{overflow-x : hidden;}
 	
 	/*c05*/
 	#c05{
-		border:0px solid yellow;
 		width:100%;
 		height:50vh;
 		position:relative;
@@ -2189,7 +2084,6 @@ body{overflow-x : hidden;}
 @media all and (max-width:599px){
 	#visual{width:100%; height:100%;}
 	#visual .swiper-container .swiper-slide.visual01{
-		border:0px solid yellow;
 		width:100%;
 		height:100%;
 		background:url(../images/main/m_bg01.png) no-repeat center top;
@@ -2201,15 +2095,12 @@ body{overflow-x : hidden;}
 		height:100%;
 		margin:0 auto;
 		display:block;
-		border:0px solid green;
 	}
 
 	#visual .swiper-container .swiper-slide.visual01 .outer .inner{
-		border:0px solid yellow;
 		width:100%;
 		height:100%;
 		display:block;
-		vertical-align:none;
 		position:static;
 	}
 
@@ -2234,7 +2125,6 @@ body{overflow-x : hidden;}
 		display:none;
 	}
 	#visual .swiper-container .swiper-slide.visual01 .outer .inner div.t_vtext{
-		border:0px solid red;
 		height:auto;
 		display:block;
 		width:100%;
@@ -2266,7 +2156,6 @@ body{overflow-x : hidden;}
 		letter-spacing:1px;
 	}
 	#visual .swiper-container .swiper-slide.visual01 .outer .inner .more{
-		border:0px solid cyan;
 		display:block;
 		margin-top:17px;
 		width:100%;
@@ -2311,7 +2200,6 @@ body{overflow-x : hidden;}
 	}
 
 	#visual .swiper-container .swiper-slide.visual02 .t-visual02 .t2_text{
-		border:0px solid cyan;
 		width:90%;
 		height:auto;
 	}
@@ -2333,7 +2221,6 @@ body{overflow-x : hidden;}
 			padding-bottom:5vh;
 		}
 	#visual .swiper-container .swiper-slide.visual02 .t-visual02 .t2_shope{
-			border:0px solid cyan;
 			}
 	#visual .swiper-container .swiper-slide.visual02 .t-visual02 .t2_shope a{
 			width:40vw;
@@ -2388,7 +2275,6 @@ body{overflow-x : hidden;}
 		}
 
 	#visual .swiper-container .swiper-slide.visual03 .t-visual03 .t-read{
-			border:0px solid cyan;
 			margin:0 auto;
 			}
 	#visual .swiper-container .swiper-slide.visual03 .t-visual03 .t-read a{
@@ -2418,7 +2304,6 @@ body{overflow-x : hidden;}
 	
 	/*c01*/
 	#contents{
-		border:0px solid red;
 		width:100%;
 		height:auto;
 		background:#fff;
@@ -2429,18 +2314,14 @@ body{overflow-x : hidden;}
 	}
 	#contents .c01{width:100%;height:100%;}
 	#contents .c01 .swiper-container2{
-		border:0px solid gray;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide{
-		border:0px solid red;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer{
-		border:0px solid blue;
 		width:100%;
 		height:80vh;
 	}
 	#contents .swiper-container2 .swiper-slide .outer .inner{
-		border:0px solid pink;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -2457,7 +2338,6 @@ body{overflow-x : hidden;}
 		display:none;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01{
-		border:0px solid black;
 		display:block;
 		width:100%;
 		height:100%;
@@ -2478,7 +2358,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01 h3{
-		border:0px solid magenta;
 		width:100%;
 		position:absolute;
 		bottom:30vh;
@@ -2488,7 +2367,6 @@ body{overflow-x : hidden;}
 		font-weight:500;
 	}
 	#contents .c01 .swiper-container2 .swiper-slide .outer .inner .t_c01 .t_c01product{
-		border:0px solid cyan;
 		width:100%;
 		position:absolute;
 		bottom:8vh;
@@ -2589,7 +2467,6 @@ body{overflow-x : hidden;}
 	
 	/*----------c02$------------------------------*/
 	#contents #c02{
-		border:0px solid red;
 		width:100%;
 		height:60vh;
 		margin:0 auto;
@@ -2599,7 +2476,6 @@ body{overflow-x : hidden;}
 	}
 
 	#contents #c02 div.c02_inner{
-		border:0px solid blue;
 		width:100%;
 		height:100%;
 		margin:0 auto;
@@ -2607,7 +2483,6 @@ body{overflow-x : hidden;}
 		position:relative;
 	}
 	#contents #c02 div.c02_inner .gallery_img{
-		border:0px solid green;
 		width:100%;
 		height:100%;
 		float:left;
@@ -2651,7 +2526,6 @@ body{overflow-x : hidden;}
 		-ms-align-items: center;
 	}
 	#contents #c02 div.c02_inner div#gallery_info dl{
-		border:0px solid cyan;
 		width:100%;
 		float:none;
 	}
@@ -2695,14 +2569,12 @@ body{overflow-x : hidden;}
 	
 	/*-------c03@-------------------*/
 	#contents #c03{
-		border:0px solid pink;
 		width:100%;
 		height:80vh;
 		padding:5vh 0;
 		margin-top:0;
 	}
 	#contents #c03 div.c03_inner{ 
-		border:0px solid green;
 		width:100%;
 		height:100%;
 		margin:0 auto;
@@ -2742,18 +2614,15 @@ body{overflow-x : hidden;}
 	}
 
 	#contents #c03 div.c03_inner div#c03_product{
-		border:0px solid yellow;
 		width:100%;
 		height:100%;
 		float:none;
 	}
 	#contents #c03 div.c03_inner div#c03_product ul{
-		border:0px solid cyan;
 		width:100%;
 		height:100%;
 	}
 	#contents #c03 div.c03_inner div#c03_product ul li{
-		border:0px solid black;
 		width:100%;
 		height:32%;
 	}
@@ -2796,13 +2665,11 @@ body{overflow-x : hidden;}
 	
 	/*c04*/
 	#c04{
-		border:0px solid red;
 		width:100%;
 		height:80vh;
 		background:#fff;
 	}
 	#c04 div.c04_inner{
-		border:0px solid green;
 		width:92%;
 		height:100%;
 		margin:0 auto;
@@ -2824,7 +2691,6 @@ body{overflow-x : hidden;}
 	}
 	#c04 div.c04_inner dl dt{
 		width:100%;
-		border:0px solid blue;
 		position:absolute;
 		top:50%;
 		text-align:center;
@@ -2869,7 +2735,6 @@ body{overflow-x : hidden;}
 	
 	/*c05*/
 	#c05{
-		border:0px solid yellow;
 		width:100%;
 		height:30vh;
 		position:relative;
