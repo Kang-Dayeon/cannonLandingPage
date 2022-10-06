@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<title>캐논</title>
+
+	<!--로그인 스타일시트-->
+	<link rel="stylesheet" href="./css/login.css">
+	<!--로그인 js-->
+	<script type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.model.js"></script>
+
+	<!-- Link Swiper's CSS&JS -->
+	<link rel="stylesheet" href="./swiper-Swiper5/package/css/swiper.css">
+	<link rel="stylesheet" href="./swiper-Swiper5/package/css/pagination.css">
+	<script src="./swiper-Swiper5/package/js/swiper.min.js"></script>
+
+
+	<!--style css-->
+	<link rel="stylesheet" type="text/css" href="./css/import.css">
+
+	<!--font-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!--FullDown Menu js-->
+	<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="./js/guide.js"></script>
+	<script type="text/javascript" src="./js/hover.js"></script>
+	<script type="text/javascript" src="./js/TweenMax.js"></script>
+	<script type="text/javascript" src="./js/TweenLite.js"></script>
+
+
+	<!-- AOS CSS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#rightsub').hide();
+			$('.right').toggle(
+				function () {
+					$('#rightsub').slideDown("fast");
+					$(".right>a").addClass("on");
+				},
+				function () {
+					$('#rightsub').slideUp("fast");
+					$(".right>a").removeClass("on");
+				}
+			);
+		});
+	</script>
+	<script>
+		if (!window.jQuery) document.write('<script src="./js/qnb_js/jquery-3.0.0.min.js"><\/script>');
+	</script>
+	<script src="./js/qnb_js/header.js"></script>
+
+	<!--버튼 숨김/나타남 스크립트-->
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 200) {
+					$('#topBtn').fadeIn();
+				}
+				else { $('#topBtn').fadeOut(); }
+			});
+			$("#topBtn").click(function () {
+				$('html, body').animate({ scrollTop: 0 }, 400);
+				return false;
+			});
+		});
+	</script>
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 200) {
+					$('#t_topBtn').fadeIn();
+				}
+				else { $('#t_topBtn').fadeOut(); }
+			});
+			$("#t_topBtn").click(function () {
+				$('html, body').animate({ scrollTop: 0 }, 400);
+				return false;
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<header>
+		<!--로그인-->
+		<div id="boxes">
+			<div id="dialog" class="window">
+				<!--<a href="#"class="close"/>Close it</a>-->
+				<form id="loginForm">
+					<h1>로그인</h1>
+					<fieldset>
+						<div id="select">
+							<input type="submit" value="회원 로그인" id="btnMember" />
+							<input type="submit" value="비회원 주문조회" id="btnNon_member" />
+						</div>
+						<div id="loginBox">
+							<div id="login">
+								<p>
+									<input type="text" id="userId" placeholder="아이디를 입력 해주세요." />
+								</p>
+								<p>
+									<input type="password" id="userPWD" placeholder="비밀번호를 입력 해주세요." />
+								</p>
+							</div>
+							<input type="submit" value="로그인" id="btnLogin" />
+						</div>
+						<div id="btn">
+							<p id="btn1">
+								<input type="checkbox" id="saveId" value="savedIdYes" />
+								<label for="saveId">아이디저장</label>
+								<input type="checkbox" id="secure" value="secureYes" />
+								<label for="secure">보안접속</label>
+							</p>
+							<p id="btn2">
+								<input type="button" value="회원가입" id="btnJoin" />
+								<input type="button" value="아이디/비밀번호 찾기" id="btnSearch" />
+							</p>
+						</div>
+						<div id="snsLogin">
+							<h6>SNS계정을 연동하여 빠르고 안전하게 로그인/회원가입 할 수 있습니다.</h6>
+							<ul>
+								<li><a href="javascript:;"><img src="./images/login/naver_icon.gif" alt="네이버" /></a></li>
+								<li><a href="javascript:;"><img src="./images/login/kakao_icon.gif" alt="카카오톡" /></a></li>
+								<li><a href="javascript:;"><img src="./images/login/apple_icon.gif" alt="애플" /></a></li>
+							</ul>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+			<!-- 마스크 영역 - 삭제하면 작동하지 않습니다. -->
+			<div id="mask"></div>
+		</div>
+		<!--로그인끝-->
+		<div class="inner">
+			<h1 id="logo"><a href="./index.html"><img src="./images/common/logo.png" alt="logo" /></a></h1>
+
+			<!--태블릿 로고-->
+			<h1 id="t_logo"><a href="./index.html"><img src="./images/common/t_logo.png" alt="logo" /></a></h1>
+
+
+			<div class="header01">
+				<div class="headerD">
+					<!-- headerD-->
+					<!--gnb-->
+					<div class="gnbD">
+						<ul class="gnb">
+							<li class="gL1">
+								<a href="./product.html" class="oneD">제품</a>
+								<div class="twoD1">
+									<a href="./product.html"><span>카메라</span`></a>
+									<a href="./product.html"><span>프린터</span></a>
+									<a href="./product.html"><span>의료기기</span></a>
+									<a href="./product.html"><span>etc</span></a>
+								</div>
+							</li>
+
+							<li class="gL2">
+								<a href="./support.html" class="oneD">고객지원</a>
+								<div class="twoD2">
+									<a href="./support.html"><span>정품등록</span></a>
+									<a href="./support.html"><span>기술지원</span></a>
+									<a href="./support.html"><span>A/S 안내</span></a>
+									<a href="./support.html"><span>매장안내</span></a>
+									<a href="./support.html"><span>렌탈 문의</span></a>
+								</div>
+							</li>
+
+							<li class="gL3">
+								<a href="./event.html" class="oneD">이벤트</a>
+								<div class="twoD3">
+									<a href="./event.html"><span>진행중인 이벤트</span></a>
+									<a href="./event.html"><span>종료된 이벤트</span></a>
+									<a href="./event.html"><span>당첨자 발표</span></a>
+
+								</div>
+							</li>
+
+							<li class="gL4">
+								<a href="./rchive.html" class="oneD">Rchive</a>
+							</li>
+
+							<li class="gL5">
+								<a href="./story.html" class="oneD">story</a>
+							</li>
+						</ul>
+					</div>
+					<!--// gnbD -->
+				</div>
+				<!--// headerD -->
+			</div>
+
+			<div class="right">
+				<a href="javascript:;">
+				</a>
+			</div>
+			<div id="rightsub">
+				<ul>
+					<li><a href="#dialog" name="modal">LOGIN</a></li>
+					<li><a href="#dialog" name="modal">MY CANON</a></li>
+					<li><a href="#dialog" name="modal">JOIN</a></li>
+					<li><a href="#dialog" name="modal">SERVICE CENTER</a></li>
+				</ul>
+			</div>
+
+			<!--태블릿 메뉴-->
+			<a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a>
+			<div id="cd-lateral-nav">
+				<ul class="cd-navigation">
+					<li class="item-has-children">
+						<a href="#0">제품</a>
+						<ul class="sub-menu">
+							<li><a href="./product.html">카메라</a></li>
+							<li><a href="./product.html">프린터</a></li>
+							<li><a href="./product.html">의료기기</a></li>
+							<li><a href="./product.html">etc</a></li>
+						</ul>
+					</li> <!-- item-has-children -->
+
+					<li class="item-has-children">
+						<a href="#0">고객지원</a>
+						<ul class="sub-menu">
+							<li><a href="./support.html">정품등록</a></li>
+							<li><a href="./support.html">기술지원</a></li>
+							<li><a href="./support.html">A/S 안내</a></li>
+							<li><a href="./support.html">매장안내</a></li>
+							<li><a href="./support.html">렌탈문의</a></li>
+						</ul>
+					</li> <!-- item-has-children -->
+					<li class="item-has-children">
+						<a href="#0">이벤트</a>
+						<ul class="sub-menu">
+							<li><a href="./event.html">진행중인 이벤트</a></li>
+							<li><a href="./event.html">종료된 이벤트</a></li>
+							<li><a href="./event.html">당첨자 발표</a></li>
+						</ul>
+					</li> <!-- item-has-children -->
+					<li class="item-has-children">
+						<a href="#0" onclick="location.href='./rchive.html'">Rchive</a>
+					</li> <!-- item-has-children -->
+					<li class="item-has-children">
+						<a href="#0" onclick="location.href='./story.html'">스토리</a>
+					</li> <!-- item-has-children -->
+				</ul> <!-- cd-navigation -->
+
+				<ul class="cd-navigation cd-single-item-wrapper">
+					<li><a href="#dialog" name="modal">LOGIN</a></li>
+					<li><a href="#dialog" name="modal">MY CANON</a></li>
+					<li><a href="#dialog" name="modal">JOIN</a></li>
+					<li><a href="#dialog" name="modal">SERVICE CENTER</a></li>
+				</ul> <!-- cd-single-item-wrapper -->
+
+
+			</div><!-- cd-lateral-nav -->
+
+		</div>
+		<!--inner-->
+	</header>
+
+	<section id="story_visual">
+		<h2>CANON STORY</h2>
+	</section>
+	<!--visual-->
+
+
+	<section id="story_c01">
+		<div class="inner">
+			<h3>꿈을 현실로 만들어 주는 견인차 <br />DREAM&amp;REALITY</h3>
+
+			<div id="img01"></div>
+
+			<div id="text_box">
+				<p>눈에 보이는 것은 물론, 보이지 않는 상상력과 감동까지도 표현하고 누구와도 공감할 수 있도록 하는 것이 캐논이 추구하는 디지털 이미징입니다.이러한 비전을 담아 만든 캐논의 DSLR카메라, 렌즈,
+					컴팩트카메라, 캠코더, 포토프린터 등의 제품을 통해 고객의 꿈을 현실로 만들어주는 견인차 역할을 하고 있습니다. 캐논은 고객 기대 이상의 혁신적인 서비스와 고객의 편의를 위한 맞춤 서비스를 통하여
+					고객의 삶에 새로운 가치를 제공하기 위해 노력하고 있습니다.<br />
+					<br />
+					<br />
+					‘회사의 성장과 번영을 통해 세계의 번영과 인류의 행복에 기여하자’는 캐논 그룹의 기업철학, 공생(共生)을 바탕으로 기업 철학에 따라 지역사회와 함께 발전하여 소비자로부터 존경 받는 건전한 기업으로
+					성장하는 것을 목표로 하고 있습니다. 이러한 이념을 바탕으로 고객과 지역사회는 물론 나라와 좋은 관계를 유지하고 환경보호에 힘쓰며, 사회적 책임을 다하도록 노력할 것입니다.
+				</p>
+			</div>
+		</div>
+		<!--inner-->
+	</section>
+	<!--c01-->
+	<section id="story_c02">
+		<div class="inner">
+			<div class="nav_tab">
+				<ul>
+					<li class="on navgation active">
+						<div></div><a href="javascript:goSlide(0);" onclick="tab_menu(0);">1933</a>
+					</li>
+
+					<li class="navgation">
+						<div></div><a href="javascript:goSlide(1);" onclick="tab_menu(1);">1970</a>
+					</li>
+
+					<li class="navgation">
+						<div></div><a href="javascript:goSlide(2);" onclick="tab_menu(2);">1980</a>
+					</li>
+
+					<li class="navgation">
+						<div></div><a href="javascript:goSlide(3);" onclick="tab_menu(3);">1992</a>
+					</li>
+
+					<li class="navgation">
+						<div></div><a href="javascript:goSlide(4);" onclick="tab_menu(4);">2005</a>
+					</li>
+
+					<li class="navgation">
+						<div></div><a href="javascript:goSlide(5);" onclick="tab_menu(5);" id="last">2010</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div id="page01" class="page" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+							<div class="title">
+								<h4>카메라 역사를 주도한<br />
+									약 80년</h4>
+								<p id="c02_text">1933년 ‘한사캐논’ 카메라의 개발을 시작으로 카메라의 역사를 주도해 온 캐논. 렌즈의 걸작품 ‘세레나’에서부터 DSLR 카메라의 역사에 한 획을 그은
+									EOS 시리즈의 개발과 세계에서 가장 작고 가벼운 디지털 카메라 IXUS 시리즈까지, 캐논이 오늘날 세계 최고의 카메라로 인정받게 된 것은 무엇보다도 최고의 품질을 위한 열정과 고객
+									여러분의 애정이 있었기 때문에 가능한 일입니다.</p>
+								<p id="go"><a href="javascript:;">정보 더 보기</a></p>
+							</div>
+							<!--title-->
+
+							<dl class="box01">
+								<dt></dt>
+								<dd class="title_text">1933~1936 ‘캐논의 탄생’</dd>
+								<dd class="ex_text">캐논은 1937년 도쿄에서 미타라이 다케시, 요시다 고로, 우치다 사부로, 그리고 마에다 다케오가 ‘정기 광학 연구소’라는 이름으로 설립한 것이
+									전신이다. 이 회사는 초기에는 간단한 광학 유리를 제조하였고, 가장 먼저 만든것은 Nippon Kogaku K.K (이 회사는 니콘의 전신)에 납품할 ‘Nikkor 렌즈’였다.
+								</dd>
+							</dl>
+							<dl class="box02">
+								<dt></dt>
+								<dd class="title_text">1937~1945<br />
+									‘하이퀄리티 35mm 카메라의 위대한 시작’</dd>
+								<dd class="ex_text">본격적으로 렌즈 뿐만 아니라 포컬 플레인 셔터를 탑재한 일본제 35mm 카메라인 '간논'을 만들기 시작했다. 이후 이 카메라의 이름을 따라 1947년
+									사명을 캐논으로 고치게 된다.</dd>
+							</dl>
+							<dl class="box03">
+								<dt></dt>
+								<dd class="title_text">1946~1969 ‘다양한 생산과 개발’</dd>
+								<dd class="ex_text">1956년 8월에 소개된 “VT” 카메라는 재래식 필름 장착 방법을 버리고, 대신에 경첩식의 후면 덮개를 이용하고 감개 릴에 필름을 장착하는 간단한
+									방법을 채택했습니다.<br />
+									“P(Populaire, 인기)” 모델이 1959년 출시되었고, 1961년 3월에 “7”이, 1965년 4월에 “7S” 모델이 그 뒤를 이었습니다. 1968년 9월 “7S”의 생산이
+									중단되자, “콴논”에서 출발한 캐논 35mm 카메라의 전통은 종지부를 찍었습니다.</dd>
+							</dl>
+						</div>
+						<!--page01-->
+					</div>
+					<!--swiper-slide01-->
+
+					<div class="swiper-slide">
+						<div id="page02" class="page" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+							<div class="title">
+								<h4>카메라 역사를 주도한<br />
+									약 80년</h4>
+								<p id="c02_text">1933년 ‘한사캐논’ 카메라의 개발을 시작으로 카메라의 역사를 주도해 온 캐논. 렌즈의 걸작품 ‘세레나’에서부터 DSLR 카메라의 역사에 한 획을 그은
+									EOS 시리즈의 개발과 세계에서 가장 작고 가벼운 디지털 카메라 IXUS 시리즈까지, 캐논이 오늘날 세계 최고의 카메라로 인정받게 된 것은 무엇보다도 최고의 품질을 위한 열정과 고객
+									여러분의 애정이 있었기 때문에 가능한 일입니다.</p>
+								<p id="go"><a href="javascript:;">정보 더 보기</a></p>
+							</div>
+							<!--title-->
+
+							<dl class="box01">
+								<dt></dt>
+								<dd class="title_text">1970~1975 캐논의 대표제품 F-1의 시작</dd>
+								<dd class="ex_text">FD 렌즈의 개발은 단지 FL 시리즈의 재생이 아니라, 장차 자동 노출(AE) 제어 시스템 고려를 기반으로 했고, 다가오는 광학/전자 시대를 위한
+									준비였습니다. 단일 자동 조리개 핀을 장착한 FL 시리즈와는 달리, FD 시리즈 렌즈는 전 구경 측광을 가능케 하는 렌즈의 최대 구경 투과용 신호 핀이 그 두드러진 특색이었습니다.
+									그러한 사양은 후에 전자 카메라 시대의 주류가 되었습니다.</dd>
+							</dl>
+
+							<dl class="box02">
+								<dt></dt>
+								<dd class="title_text">1976~1986 전자동 카메라로의 혁명적<br />
+									진화</dd>
+								<dd class="ex_text">본격적으로 렌즈 뿐만 아니라 포컬 플레인 셔터를 탑재한 일본제 35mm 카메라인 '간논'을 만들기 시작했다. 이후 이 카메라의 이름을 따라 1947년
+									사명을 캐논으로 고치게 된다.</dd>
+							</dl>
+							<dl class="box03">
+								<dt></dt>
+								<dd class="title_text">1977 자동 초점 소형 카메라, AF35M 탄생</dd>
+								<dd class="ex_text">자동 초점(AF) 카메라 시장에서의 치열한 경쟁에 자극을 받은 캐논은 자신의 최초 AF 렌즈-셔터 카메라, AF35M(오토보이)을 개발했습니다.
+									코니시로꾸 고교(현재의 코니카)가 “코니카 C35AF”라고 이름 지은 세계 최초의 AF 카메라를 1977년에 개발했습니다. 그 이후 모든 주요 카메라 제조 회사들이 그 뒤를
+									따랐습니다.</dd>
+							</dl>
+						</div>
+						<!--page02-->
+					</div>
+					<!--swiper-slide02-->
+
+					<div class="swiper-slide">
+						<div id="page03" class="page" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+							<div class="title">
+								<h4>카메라 역사를 주도한<br />
+									약 80년</h4>
+								<p id="c02_text">1933년 ‘한사캐논’ 카메라의 개발을 시작으로 카메라의 역사를 주도해 온 캐논. 렌즈의 걸작품 ‘세레나’에서부터 DSLR 카메라의 역사에 한 획을 그은
+									EOS 시리즈의 개발과 세계에서 가장 작고 가벼운 디지털 카메라 IXUS 시리즈까지, 캐논이 오늘날 세계 최고의 카메라로 인정받게 된 것은 무엇보다도 최고의 품질을 위한 열정과 고객
+									여러분의 애정이 있었기 때문에 가능한 일입니다.</p>
+								<p id="go"><a href="javascript:;">정보 더 보기</a></p>
+							</div>
+							<!--title-->
+
+							<dl class="box01">
+								<dt></dt>
+								<dd class="title_text">1933~1936 ‘캐논의 탄생’</dd>
+								<dd class="ex_text">캐논은 1937년 도쿄에서 미타라이 다케시, 요시다 고로, 우치다 사부로, 그리고 마에다 다케오가 ‘정기 광학 연구소’라는 이름으로 설립한 것이
+									전신이다. 이 회사는 초기에는 간단한 광학 유리를 제조하였고, 가장 먼저 만든것은 Nippon Kogaku K.K (이 회사는 니콘의 전신)에 납품할 ‘Nikkor 렌즈’였다.
+								</dd>
+							</dl>
+							<dl class="box02">
+								<dt></dt>
+								<dd class="title_text">1937~1945<br />
+									‘하이퀄리티 35mm 카메라의 위대한 시작’</dd>
+								<dd class="ex_text">본격적으로 렌즈 뿐만 아니라 포컬 플레인 셔터를 탑재한 일본제 35mm 카메라인 '간논'을 만들기 시작했다. 이후 이 카메라의 이름을 따라 1947년
+									사명을 캐논으로 고치게 된다.</dd>
+							</dl>
+							<dl class="box03">
+								<dt></dt>
+								<dd class="title_text">1946~1969 ‘다양한 생산과 개발’</dd>
+								<dd class="ex_text">1956년 8월에 소개된 “VT” 카메라는 재래식 필름 장착 방법을 버리고, 대신에 경첩식의 후면 덮개를 이용하고 감개 릴에 필름을 장착하는 간단한
+									방법을 채택했습니다.<br />
+									“P(Populaire, 인기)” 모델이 1959년 출시되었고, 1961년 3월에 “7”이, 1965년 4월에 “7S” 모델이 그 뒤를 이었습니다. 1968년 9월 “7S”의 생산이
+									중단되자, “콴논”에서 출발한 캐논 35mm 카메라의 전통은 종지부를 찍었습니다.</dd>
+							</dl>
+						</div>
+						<!--page03-->
+					</div>
+					<!--swiper-slide03-->
+
+					<div class="swiper-slide">
+						<div id="page04" class="page" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+							<div class="title">
+								<h4>카메라 역사를 주도한<br />
+									약 80년</h4>
+								<p id="c02_text">1933년 ‘한사캐논’ 카메라의 개발을 시작으로 카메라의 역사를 주도해 온 캐논. 렌즈의 걸작품 ‘세레나’에서부터 DSLR 카메라의 역사에 한 획을 그은
+									EOS 시리즈의 개발과 세계에서 가장 작고 가벼운 디지털 카메라 IXUS 시리즈까지, 캐논이 오늘날 세계 최고의 카메라로 인정받게 된 것은 무엇보다도 최고의 품질을 위한 열정과 고객
+									여러분의 애정이 있었기 때문에 가능한 일입니다.</p>
+								<p id="go"><a href="javascript:;">정보 더 보기</a></p>
+							</div>
+							<!--title-->
+
+							<dl class="box01">
+								<dt></dt>
+								<dd class="title_text">1970~1975 캐논의 대표제품 F-1의 시작</dd>
+								<dd class="ex_text">FD 렌즈의 개발은 단지 FL 시리즈의 재생이 아니라, 장차 자동 노출(AE) 제어 시스템 고려를 기반으로 했고, 다가오는 광학/전자 시대를 위한
+									준비였습니다. 단일 자동 조리개 핀을 장착한 FL 시리즈와는 달리, FD 시리즈 렌즈는 전 구경 측광을 가능케 하는 렌즈의 최대 구경 투과용 신호 핀이 그 두드러진 특색이었습니다.
+									그러한 사양은 후에 전자 카메라 시대의 주류가 되었습니다.</dd>
+							</dl>
+
+							<dl class="box02">
+								<dt></dt>
+								<dd class="title_text">1976~1986 전자동 카메라로의 혁명적<br />
+									진화</dd>
+								<dd class="ex_text">본격적으로 렌즈 뿐만 아니라 포컬 플레인 셔터를 탑재한 일본제 35mm 카메라인 '간논'을 만들기 시작했다. 이후 이 카메라의 이름을 따라 1947년
+									사명을 캐논으로 고치게 된다.</dd>
+							</dl>
+							<dl class="box03">
+								<dt></dt>
+								<dd class="title_text">1977 자동 초점 소형 카메라, AF35M 탄생</dd>
+								<dd class="ex_text">자동 초점(AF) 카메라 시장에서의 치열한 경쟁에 자극을 받은 캐논은 자신의 최초 AF 렌즈-셔터 카메라, AF35M(오토보이)을 개발했습니다.
+									코니시로꾸 고교(현재의 코니카)가 “코니카 C35AF”라고 이름 지은 세계 최초의 AF 카메라를 1977년에 개발했습니다. 그 이후 모든 주요 카메라 제조 회사들이 그 뒤를
+									따랐습니다.</dd>
+							</dl>
+						</div>
+						<!--page04-->
+					</div>
+					<!--swiper-slide04-->
+
+					<div class="swiper-slide">
+						<div id="page05" class="page" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+							<div class="title">
+								<h4>카메라 역사를 주도한<br />
+									약 80년</h4>
+								<p id="c02_text">1933년 ‘한사캐논’ 카메라의 개발을 시작으로 카메라의 역사를 주도해 온 캐논. 렌즈의 걸작품 ‘세레나’에서부터 DSLR 카메라의 역사에 한 획을 그은
+									EOS 시리즈의 개발과 세계에서 가장 작고 가벼운 디지털 카메라 IXUS 시리즈까지, 캐논이 오늘날 세계 최고의 카메라로 인정받게 된 것은 무엇보다도 최고의 품질을 위한 열정과 고객
+									여러분의 애정이 있었기 때문에 가능한 일입니다.</p>
+								<p id="go"><a href="javascript:;">정보 더 보기</a></p>
+							</div>
+							<!--title-->
+
+							<dl class="box01">
+								<dt></dt>
+								<dd class="title_text">1933~1936 ‘캐논의 탄생’</dd>
+								<dd class="ex_text">캐논은 1937년 도쿄에서 미타라이 다케시, 요시다 고로, 우치다 사부로, 그리고 마에다 다케오가 ‘정기 광학 연구소’라는 이름으로 설립한 것이
+									전신이다. 이 회사는 초기에는 간단한 광학 유리를 제조하였고, 가장 먼저 만든것은 Nippon Kogaku K.K (이 회사는 니콘의 전신)에 납품할 ‘Nikkor 렌즈’였다.
+								</dd>
+							</dl>
+							<dl class="box02">
+								<dt></dt>
+								<dd class="title_text">1937~1945<br />
+									‘하이퀄리티 35mm 카메라의 위대한 시작’</dd>
+								<dd class="ex_text">본격적으로 렌즈 뿐만 아니라 포컬 플레인 셔터를 탑재한 일본제 35mm 카메라인 '간논'을 만들기 시작했다. 이후 이 카메라의 이름을 따라 1947년
+									사명을 캐논으로 고치게 된다.</dd>
+							</dl>
+							<dl class="box03">
+								<dt></dt>
+								<dd class="title_text">1946~1969 ‘다양한 생산과 개발’</dd>
+								<dd class="ex_text">1956년 8월에 소개된 “VT” 카메라는 재래식 필름 장착 방법을 버리고, 대신에 경첩식의 후면 덮개를 이용하고 감개 릴에 필름을 장착하는 간단한
+									방법을 채택했습니다.<br />
+									“P(Populaire, 인기)” 모델이 1959년 출시되었고, 1961년 3월에 “7”이, 1965년 4월에 “7S” 모델이 그 뒤를 이었습니다. 1968년 9월 “7S”의 생산이
+									중단되자, “콴논”에서 출발한 캐논 35mm 카메라의 전통은 종지부를 찍었습니다.</dd>
+							</dl>
+						</div>
+						<!--page05-->
+					</div>
+					<!--swiper-slide05-->
+
+					<div class="swiper-slide">
+						<div id="page06" class="page" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+							<div class="title">
+								<h4>카메라 역사를 주도한<br />
+									약 80년</h4>
+								<p id="c02_text">1933년 ‘한사캐논’ 카메라의 개발을 시작으로 카메라의 역사를 주도해 온 캐논. 렌즈의 걸작품 ‘세레나’에서부터 DSLR 카메라의 역사에 한 획을 그은
+									EOS 시리즈의 개발과 세계에서 가장 작고 가벼운 디지털 카메라 IXUS 시리즈까지, 캐논이 오늘날 세계 최고의 카메라로 인정받게 된 것은 무엇보다도 최고의 품질을 위한 열정과 고객
+									여러분의 애정이 있었기 때문에 가능한 일입니다.</p>
+								<p id="go"><a href="javascript:;">정보 더 보기</a></p>
+							</div>
+							<!--title-->
+
+							<dl class="box01">
+								<dt></dt>
+								<dd class="title_text">1970~1975 캐논의 대표제품 F-1의 시작</dd>
+								<dd class="ex_text">FD 렌즈의 개발은 단지 FL 시리즈의 재생이 아니라, 장차 자동 노출(AE) 제어 시스템 고려를 기반으로 했고, 다가오는 광학/전자 시대를 위한
+									준비였습니다. 단일 자동 조리개 핀을 장착한 FL 시리즈와는 달리, FD 시리즈 렌즈는 전 구경 측광을 가능케 하는 렌즈의 최대 구경 투과용 신호 핀이 그 두드러진 특색이었습니다.
+									그러한 사양은 후에 전자 카메라 시대의 주류가 되었습니다.</dd>
+							</dl>
+
+							<dl class="box02">
+								<dt></dt>
+								<dd class="title_text">1976~1986 전자동 카메라로의 혁명적<br />
+									진화</dd>
+								<dd class="ex_text">본격적으로 렌즈 뿐만 아니라 포컬 플레인 셔터를 탑재한 일본제 35mm 카메라인 '간논'을 만들기 시작했다. 이후 이 카메라의 이름을 따라 1947년
+									사명을 캐논으로 고치게 된다.</dd>
+							</dl>
+							<dl class="box03">
+								<dt></dt>
+								<dd class="title_text">1977 자동 초점 소형 카메라, AF35M 탄생</dd>
+								<dd class="ex_text">자동 초점(AF) 카메라 시장에서의 치열한 경쟁에 자극을 받은 캐논은 자신의 최초 AF 렌즈-셔터 카메라, AF35M(오토보이)을 개발했습니다.
+									코니시로꾸 고교(현재의 코니카)가 “코니카 C35AF”라고 이름 지은 세계 최초의 AF 카메라를 1977년에 개발했습니다. 그 이후 모든 주요 카메라 제조 회사들이 그 뒤를
+									따랐습니다.</dd>
+							</dl>
+						</div>
+						<!--page06-->
+					</div>
+					<!--swiper-slide06-->
+
+				</div>
+				<!--swiper-wrapper-->
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!--swiper-container-->
+		</div>
+		<!--inner-->
+	</section>
+	<!--c02-->
+
+
+	<section id="top">
+		<p id="topBtn"><a href="javascript:;"><img src="./images/common/top.gif" alt="top" /></a></p>
+
+		<!--태블릿 탑버튼-->
+		<p id="t_topBtn"><a href="javascript:;"><img src="./images/common/t_top.gif" alt="top" /></a></p>
+	</section>
+
+
+	<footer class="sub_footer">
+		<div class="inner">
+
+			<div class="f_contents">
+
+				<h2 id="f_logo"><img src="./images/common/f_logo_05.png" alt="하단로고" /></h2>
+
+				<!--모바일 로고-->
+				<h2 id="m_logo"><img src="./images/common/m_logo_05.png" alt="하단로고" /></h2>
+
+				<ul id="f_menu">
+					<li><a href="javascript:;">회사소개</a></li>
+					<li><a href="javascript:;">개인정보처리방침</a></li>
+					<li><a href="javascript:;">이용약관</a></li>
+				</ul>
+
+				<ul id="f_sns">
+					<li><a href="javascript:;"><img src="./images/common/sns_icon_06.gif" alt="인스타그램" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/sns_icon_11.gif" alt="유튜브" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/sns_icon_08.gif" alt="페이스북" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/sns_icon_03.gif" alt="트위터" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/sns_icon_14.gif" alt="카카오페이지" /></a></li>
+				</ul>
+
+				<!--모바일 sns icon-->
+				<ul id="m_sns">
+					<li><a href="javascript:;"><img src="./images/common/msns_icon1.gif" alt="인스타그램" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/msns_icon2.gif" alt="유튜브" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/msns_icon3.gif" alt="페이스북" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/msns_icon4.gif" alt="트위터" /></a></li>
+					<li><a href="javascript:;"><img src="./images/common/msns_icon5.gif" alt="카카오페이지" /></a></li>
+				</ul>
+
+				<ul id="f_info_top">
+					<li>상호명 : 캐논코리아(주)</li>
+					<li>대표자 : YOSHIKAI SHUNJI</li>
+					<li>사업자등록번호 : 220-87-15734</li>
+				</ul>
+
+				<ul id="f_info_bottom">
+					<li>통신판매업 신고번호 : 강남11387호</li>
+					<li>주소 : 서울특별시 강남구 테헤란로 607 5층</li>
+					<li>고객센터 : 1588-8133 </li>
+				</ul>
+
+
+				<!--태블릿-->
+				<div class="t_footer">
+					<ul id="tf_info_t">
+						<li>상호명 : 캐논코리아(주)</li>
+						<li>대표자 : YOSHIKAI SHUNJI</li>
+					</ul>
+					<ul>
+						<li>사업자등록번호 : 220-87-15734</li>
+						<li>통신판매업 신고번호 : 강남11387호</li>
+					</ul>
+					<ul>
+						<li>주소 : 서울특별시 강남구 테헤란로 607 5층</li>
+						<li>고객센터 : 1588-8133 </li>
+					</ul>
+				</div>
+
+				<p>COPYRIGHT ⓒ CANON KOREA INC. ALL RIGHTS RESERVED</p>
+			</div>
+		</div>
+	</footer>
+
+
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			paginationClickable: true,
+			spaceBetween: 10,
+			centeredSlides: true,
+			autoplay: 5000,
+			autoplayDisableOnInteraction: false,
+			//effect: 'fade'
+		});
+
+
+		function goSlide(index) {
+			swiper.slideTo(index, 100, true);
+		}
+
+		function tab_menu(num) {
+			var f = $('.nav_tab').find('li');
+			for (var i = 0; i < f.length; i++) {
+				if (i <= num) {
+					f.eq(i).addClass('active');
+					$('.nav_tab0' + i).show();
+				} else {
+					f.eq(i).removeClass('active');
+					$('.nav_tab0' + i).hide();
+				}
+			}
+		}
+	</script>
+
+	<!-- AOS script -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		AOS.init();
+	</script>
+
+	<script src="./js/qnb_js/main.js"></script>
+	<!-- Resource jQuery -->
+	<script src="./js/qnb_js/ui.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<title>캐논</title>
+
+<!--로그인 스타일시트-->
+<link rel="stylesheet" href="./css/login.css">
+<!--로그인 js-->
+<script type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.model.js"></script>
+
+<!--style css-->
+<link rel="stylesheet" type="text/css" href="./css/import.css">
+
+<!--font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!--FullDown Menu js-->
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="./js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="./js/guide.js"></script>
+<script type="text/javascript" src="./js/hover.js"></script>
+<script type="text/javascript" src="./js/TweenMax.js"></script>
+<script type="text/javascript" src="./js/TweenLite.js"></script>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('#rightsub').hide();
+			$('.right').toggle (
+				function(){
+					$('#rightsub').slideDown("fast");
+					$(".right>a").addClass("on");
+				},
+				function(){
+					$('#rightsub').slideUp("fast");
+					$(".right>a").removeClass("on");
+				}
+			);
+		});
+</script>
+
+<script>
+	if( !window.jQuery ) document.write('<script src="./js/qnb_js/jquery-3.0.0.min.js"><\/script>');
+</script>
+<script src="./js/qnb_js/header.js"></script>
+
+<!--버튼 숨김/나타남 스크립트-->
+<script>
+$(function() {
+	$(window).scroll(function() { 
+		if ($(this).scrollTop() > 200) { 
+			$('#topBtn').fadeIn(); } 
+		else { $('#topBtn').fadeOut(); }
+	}); 
+	$("#topBtn").click(function() { 
+   	$('html, body').animate({ scrollTop : 0  }, 400); 
+    return false; });
+});
+</script>
+<script>
+$(function() {
+	$(window).scroll(function() { 
+		if ($(this).scrollTop() > 200) { 
+			$('#t_topBtn').fadeIn(); } 
+		else { $('#t_topBtn').fadeOut(); }
+	}); 
+	$("#t_topBtn").click(function() { 
+   	$('html, body').animate({ scrollTop : 0  }, 400); 
+    return false; });
+});
+</script>
+
+</head>
+<body>
+<header>
+<!--로그인-->
+<div id="boxes">
+<div id="dialog" class="window"> 
+<!--<a href="#"class="close"/>Close it</a>-->
+	<form id="loginForm">
+		<h1>로그인</h1>
+		<fieldset>	
+			<div id="select">
+				<input type="submit" value="회원 로그인" id="btnMember" />
+				<input type="submit" value="비회원 주문조회" id="btnNon_member" />
+			</div>
+			<div id="loginBox">
+				<div id="login">
+					<p>
+						<input type="text" id="userId" placeholder="아이디를 입력 해주세요."/>
+					</p>
+					<p>
+						<input type="password" id="userPWD" placeholder="비밀번호를 입력 해주세요." />
+					</p>
+				</div>
+					<input type="submit" value="로그인" id="btnLogin" />
+			</div>
+			<div id="btn">
+				<p id="btn1">
+					<input type="checkbox" id="saveId" value="savedIdYes" />
+					<label for="saveId">아이디저장</label>	
+					<input type="checkbox" id="secure" value="secureYes" />
+					<label for="secure">보안접속</label>	
+				</p>
+				<p id="btn2">
+					<input type="button" value="회원가입" id="btnJoin" />
+					<input type="button" value="아이디/비밀번호 찾기" id="btnSearch" />
+				</p>
+			</div>
+			<div id="snsLogin">
+			   <h6>SNS계정을 연동하여 빠르고 안전하게 로그인/회원가입 할 수 있습니다.</h6>
+			   <ul>
+				 <li><a href="javascript:;"><img src="./images/login/naver_icon.gif" alt="네이버" /></a></li>
+				 <li><a href="javascript:;"><img src="./images/login/kakao_icon.gif" alt="카카오톡" /></a></li>
+				 <li><a href="javascript:;"><img src="./images/login/apple_icon.gif" alt="애플" /></a></li>
+			   </ul>
+			</div>
+		</fieldset>
+	</form>
+</div>
+<!-- 마스크 영역 - 삭제하면 작동하지 않습니다. -->
+<div id="mask"></div>
+</div>
+<!--로그인끝-->
+	<div class="inner">
+		<h1 id="logo"><a href="./index.html"><img src="./images/common/logo.png" alt="logo" /></a></h1>
+		
+		<!--태블릿 로고-->
+		<h1 id="t_logo"><a href="./index.html"><img src="./images/common/t_logo.png" alt="logo" /></a></h1>
+		
+		
+		<div class="header01">
+			<div class="headerD"><!-- headerD-->	
+			<!--gnb-->
+				<div class="gnbD">
+					<ul class="gnb">
+						<li class="gL1">
+							<a href="./product.html" class="oneD">제품</a>
+							<div class="twoD1">
+								<a href="./product.html"><span>카메라</span`></a>
+								<a href="./product.html"><span>프린터</span></a>
+								<a href="./product.html"><span>의료기기</span></a>
+								<a href="./product.html"><span>etc</span></a>
+							</div>
+						</li> 
+						
+						<li class="gL2">
+							<a href="./support.html" class="oneD">고객지원</a>
+							<div class="twoD2">
+								<a href="./support.html"><span>정품등록</span></a>
+								<a href="./support.html"><span>기술지원</span></a>
+								<a href="./support.html"><span>A/S 안내</span></a>
+								<a href="./support.html"><span>매장안내</span></a>
+								<a href="./support.html"><span>렌탈 문의</span></a>			
+							</div>
+						</li>  
+					
+						<li class="gL3">
+							<a href="./event.html" class="oneD">이벤트</a>
+							<div class="twoD3">
+								<a href="./event.html"><span>진행중인 이벤트</span></a>
+								<a href="./event.html"><span>종료된 이벤트</span></a>
+								<a href="./event.html"><span>당첨자 발표</span></a>
+						
+							</div>
+						</li>  
+					
+						<li class="gL4">
+							<a href="./rchive.html" class="oneD">Rchive</a>
+						</li>  
+					
+						<li class="gL5">
+							<a href="./story.html" class="oneD">story</a>
+						</li> 
+					</ul>
+				</div><!--// gnbD -->
+			</div><!--// headerD -->
+		</div>	
+		
+		<div class="right">
+			<a href="javascript:;">
+			</a>
+		</div>
+		<div id="rightsub">
+		   <ul>
+		        <li><a href="#dialog" name="modal">LOGIN</a></li>
+				<li><a href="#dialog" name="modal">MY CANON</a></li>
+				<li><a href="#dialog" name="modal">JOIN</a></li>
+				<li><a href="#dialog" name="modal">SERVICE CENTER</a></li>
+		   </ul>
+		</div>
+		
+		<!--태블릿 메뉴-->
+		<a id="cd-menu-trigger" href="#0"><span class="cd-menu-icon"></span></a>
+		<div id="cd-lateral-nav">
+		<ul class="cd-navigation">
+			<li class="item-has-children">
+				<a href="#0">제품</a>
+				<ul class="sub-menu">
+					<li><a href="./product.html">카메라</a></li>
+					<li><a href="./product.html">프린터</a></li>
+					<li><a href="./product.html">의료기기</a></li>
+					<li><a href="./product.html">etc</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+
+			<li class="item-has-children">
+				<a href="#0">고객지원</a>
+				<ul class="sub-menu">
+					<li><a href="./support.html">정품등록</a></li>
+					<li><a href="./support.html">기술지원</a></li>
+					<li><a href="./support.html">A/S 안내</a></li>
+					<li><a href="./support.html">매장안내</a></li>
+					<li><a href="./support.html">렌탈문의</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+			<li class="item-has-children">
+				<a href="#0">이벤트</a>
+				<ul class="sub-menu">
+					<li><a href="./event.html">진행중인 이벤트</a></li>
+					<li><a href="./event.html">종료된 이벤트</a></li>
+					<li><a href="./event.html">당첨자 발표</a></li>
+				</ul>
+			</li> <!-- item-has-children -->
+			<li class="item-has-children">
+				<a href="#0" onclick="location.href='./rchive.html'">Rchive</a>
+			</li> <!-- item-has-children -->
+			<li class="item-has-children">
+				<a href="#0" onclick="location.href='./story.html'">스토리</a>
+			</li> <!-- item-has-children -->
+		</ul> <!-- cd-navigation -->
+
+		<ul class="cd-navigation cd-single-item-wrapper">
+			<li><a href="#dialog" name="modal">LOGIN</a></li>
+			<li><a href="#dialog" name="modal">MY CANON</a></li>
+			<li><a href="#dialog" name="modal">JOIN</a></li>
+			<li><a href="#dialog" name="modal">SERVICE CENTER</a></li>
+		</ul> <!-- cd-single-item-wrapper -->
+
+
+	</div><!-- cd-lateral-nav -->
+		
+	</div><!--inner-->
+</header>
+	
+<section id="rchive_visual">
+	<video autoplay muted loop webkit-playsinline class="rchive_v" controls>
+		<source src="./video/bg1.mp4" type="video/mp4" />
+	</video>
+	<video muted loop webkit-playsinline controls poster="./images/sub04/visual.jpg" class="t_rchive">
+		<source src="./video/bg1.mp4" type="video/mp4" />
+	</video>
+</section>
+
+
+<div id="c01_02">
+<p id="bg_text">R SERIES</p>
+
+<p class="c01_left" data-aos="fade-up" data-aos-duration="1500" data-aos-easing="ease-out">CANON R SYSTEM</p>
+
+<section id="rchive_c01">
+	   <div class="inner">
+		  <p class="c01_1" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50" data-aos-easing="ease-out">쾌적, 쾌속, 고화질을 실현한</p>
+		  
+		  <h3 class="c01_2" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="100" data-aos-easing="ease-out">CANON R SERIES</h3>
+		  
+		  <h3 class="c01_3" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="150" data-aos-easing="ease-out">새로운 혁명을 만나보세요</h3>
+		  
+		  <p class="c01_4" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" data-aos-easing="ease-out">“DO YOU WANT TO FIND OUT MORE?” </p>
+		  
+		  <p class="c01_5" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="100" data-aos-easing="ease-out"><a href="javascrip:;">R CLUB 가입하기</a></p>
+	   </div><!--inner-->
+</section>
+
+
+<section id="rchive_c02">
+
+   <div class="c02_box">
+	   <h2 data-aos="fade-up" data-aos-duration="1500" data-aos-offset="150" data-aos-easing="ease-out">REVOLUTION</h2>
+	   
+	   <p class="c02_text" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="150" data-aos-easing="ease-out">풀 프레임 미러리스의 새로운 기준 EOS R 시스템은<br />
+	 사진과 영상 촬영의 경계를 넘어 표현의 가능성을 확대합니다.</p>
+   </div>
+   
+   <div class="wrap01">
+	   <div class="c02_box1">
+		  <p class="box1_img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-out"></p>
+		  
+		  <p class="box1_text" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" data-aos-easing="ease-out">어떤 환경에서도,</p>
+	   </div><!--box1-->
+   </div><!--wrap01-->
+   
+   <div class="wrap02">
+	   <div class="c02_box2">
+		  <p class="box2_img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-out"></p>
+		  
+		  <p class="box2_text" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" data-aos-easing="ease-out">영상촬영도,</p>
+	   </div>
+   </div><!--wrap02-->
+   
+   <div class="wrap03">
+	   <div class="c02_box3">
+		  <p class="box3_img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-out"></p>
+		  
+		  <p class="box3_text" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" data-aos-easing="ease-out">인물사진도,</p>
+	   </div>
+   </div><!--wrap03-->
+   
+   <div class="wrap04">
+	   <div class="c02_box4">
+		  <p class="box4_img" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-out"></p>
+		  
+		  <p class="box4_text" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="200" data-aos-easing="ease-out">고속 연속 촬영도,</p>
+	   </div>
+   </div><!--wrap04-->
+   
+   <div class="wrap05">
+	   <div class="c02_box5">
+		  <h3 class="box5_title" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200" data-aos-easing="ease-out">선명하고 완벽하게</p>
+		  
+		  <p class="box5_text" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="240" data-aos-easing="ease-out">어떠한 상황에서도 당신의 크리에이티브를 온전히 담아낸다.<br />
+			새로운 RF렌즈군을 기반으로 더욱 향상된 광학성능과 강력해진 이미지 퀄리티,<br /> 
+			뛰어난 AF성능 및 다양한 기능과 EOS만의 편의성이 결집된 EOS R 시리즈를 만나보세요.</p>
+	   </div>
+   </div><!--wrap05-->
+   
+   <div class="wrap06">
+	   <div class="c02_box6">
+		  <p class="box6_img_left" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="250" data-aos-easing="ease-out"></p>
+		  <p class="box6_img_right" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="400" data-aos-easing="ease-out"></p>
+		  <p class="box6_text" data-aos="fade-up" data-aos-duration="2000" data-aos-offset="250" data-aos-easing="ease-out">당신의 선택의 기준이 됩니다</p>
+	   </div>
+   </div><!--wrap06-->
+   
+</section><!--c02-->
+</div>
+
+
+<section id="top">
+<p id="topBtn"><a href="javascript:;"><img src="./images/common/top.gif" alt="top" /></a></p>
+		
+<!--태블릿 탑버튼-->
+<p id="t_topBtn"><a href="javascript:;"><img src="./images/common/t_top.gif" alt="top" /></a></p>
+</section>
+
+
+<footer class="sub_footer">
+	<div class="inner">
+		
+		<div class="f_contents">
+		
+			<h2 id="f_logo"><img src="./images/common/f_logo_05.png" alt="하단로고" /></h2>
+			
+			<!--모바일 로고-->
+			<h2 id="m_logo"><img src="./images/common/m_logo_05.png" alt="하단로고" /></h2>
+			
+			<ul id="f_menu">
+				<li><a href="javascript:;">회사소개</a></li>
+				<li><a href="javascript:;">개인정보처리방침</a></li>
+				<li><a href="javascript:;">이용약관</a></li>
+			</ul>
+			
+			<ul id="f_sns">
+				<li><a href="javascript:;"><img src="./images/common/sns_icon_06.gif" alt="인스타그램" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/sns_icon_11.gif" alt="유튜브" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/sns_icon_08.gif" alt="페이스북" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/sns_icon_03.gif" alt="트위터" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/sns_icon_14.gif" alt="카카오페이지" /></a></li>
+			</ul>
+			
+			<!--모바일 sns icon-->
+			<ul id="m_sns">
+				<li><a href="javascript:;"><img src="./images/common/msns_icon1.gif" alt="인스타그램" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/msns_icon2.gif" alt="유튜브" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/msns_icon3.gif" alt="페이스북" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/msns_icon4.gif" alt="트위터" /></a></li>
+				<li><a href="javascript:;"><img src="./images/common/msns_icon5.gif" alt="카카오페이지" /></a></li>
+			</ul>
+			
+			<ul id="f_info_top">
+			<li>상호명 : 캐논코리아(주)</li>
+			<li>대표자 : YOSHIKAI SHUNJI</li>
+			<li>사업자등록번호 : 220-87-15734</li>
+			</ul>
+			
+			<ul id="f_info_bottom">
+			<li>통신판매업 신고번호 : 강남11387호</li>
+			<li>주소 : 서울특별시 강남구 테헤란로 607 5층</li>
+			<li>고객센터 : 1588-8133   </li> 
+			</ul>
+			
+			
+			<!--태블릿-->
+			<div class="t_footer">
+				<ul id="tf_info_t">
+					<li>상호명 : 캐논코리아(주)</li>
+					<li>대표자 : YOSHIKAI SHUNJI</li>
+				</ul>
+				<ul>
+					<li>사업자등록번호 : 220-87-15734</li>
+					<li>통신판매업 신고번호 : 강남11387호</li>
+				</ul>
+				<ul>
+					<li>주소 : 서울특별시 강남구 테헤란로 607 5층</li>
+					<li>고객센터 : 1588-8133   </li> 
+				</ul>
+			</div>
+			
+			<p>COPYRIGHT ⓒ CANON KOREA INC. ALL RIGHTS RESERVED</p>
+		</div>
+	</div>
+</footer>
+
+<!-- AOS script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+  
+<script src="./js/qnb_js/main.js"></script> 
+<!-- Resource jQuery -->
+<script src="./js/qnb_js/ui.js"></script>
+
+</body>
+</html>
